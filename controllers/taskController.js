@@ -14,5 +14,12 @@ let taskController = {
         res.json(tasks);
       });
   },
+  addTask: function(req,res){
+    let newTask = {
+      title: req.body.task
+    };
+    Task.create(newTask);
+    res.redirect(303, '/tasks');
+  }    
 };
 module.exports = taskController;

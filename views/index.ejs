@@ -1,7 +1,29 @@
-<h2>所有資料</h2>
-
-<ul>
-    <% tasks.forEach(function(task) { %>
-        <li><a href='/task/<%= task.id %>'><%= task.id %>: <%= task.title %></a></li>
-    <% }); %>
-</ul>
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta name="description" content="TODO List - Template">
+	  <meta charset="utf-8">
+	  <title>YourTask</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+	  <div class='container'>
+	  	<br>
+	    <h1>TODO List</h1>
+	        <form action="/addTask" method="post">
+	          <div class="form-group">
+			    <input type="text" class="form-control" placeholder="Enter the new task" name="task">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Add</button>
+			</form>
+	    <hr>
+	    <div class="container">
+	    	<form action="/deleteTask" method="post">
+			    <% tasks.forEach(function(task) { %>
+			        <input class="form-check-input"  id="checkedTask" type="checkbox"><a href='/task/<%= task.id %>'><%= task.id %>. <%= task.title %></a><br>
+			    <% }); %>
+			</form>	
+		</div>
+	  </div>
+	</body>
+</html>
