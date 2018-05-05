@@ -86,14 +86,14 @@ app.use(express.static('public'));
 
 ## view engine
 ### ejs
-- must install ejs first: npm install ejs --save
+- must install ejs first: $ npm install ejs --save
 - index.ejs 放在 /views 底下 
 ```javescript
 app.set('view engine','ejs'); 
 ```
 ---
 ### pug (jade)
-
+- must install pug first: $ npm install pug
 ``` javascript
 app.set('view engine', 'pug');
 ```
@@ -115,6 +115,10 @@ app.get('/', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello!' });
 });
 ```
+
+### 補充 
+
+convert html to pug(jade): https://html2pug.herokuapp.com/
 
 
 
