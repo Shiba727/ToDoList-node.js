@@ -15,6 +15,7 @@ module.exports = function (app) {
   app.get('/api/tasks', taskController.indexApi);
   app.get('/',userController.loginPage);
   app.get('/register',userController.registerPage);
+  app.get('/logout',userController.logout);
   app.get('/tasks/edit/',checkAuth, taskController.editTask);
   app.get('/tasks/delete/',checkAuth, taskController.deleteTask);    
 
