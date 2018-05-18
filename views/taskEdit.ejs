@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta name="description" content="TODO List - Template">
+	  <meta charset="utf-8">
+	  <title>YourTask</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<style type="text/css">
+		input{
+			margin: 10px;	
+		}
+	</style>
+	<body>
+	  <div class='container'>
+	  	<br>
+	    <h1>TODO List</h1>
+	    <hr>
+	    <div class="col-6 edit">
+	    	<form action="/tasks/edit" method="POST">
+	    		<input type="hidden" class="form-control" name="taskid" value="<%= task.id %>">
+	    		TaskName:<input type="text" class="form-control" name="taskname" placeholder="<%= task.title %>">
+	    		<input class="btn btn-info" type="submit" name="submit" value="submit">
+	    		<input class="btn btn-danger" type="submit" name="cancel" value="cancel">
+	    	</form>
+	    </div>
+	</body>
+</html>

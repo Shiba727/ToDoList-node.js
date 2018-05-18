@@ -3,8 +3,9 @@
 	<head>
 	  <meta name="description" content="TODO List - Template">
 	  <meta charset="utf-8">
-	  <title>YourTask</title>
+	  <title>Simple List</title>
 	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	  <link rel="stylesheet" type="text/css" href="/todolist.css">
 	</head>
 	<body>
 	  <div class='container'>
@@ -18,11 +19,11 @@
 			</form>
 	    <hr>
 	    <div class="container">
-	    	<form action="/deleteTask" method="post">
 			    <% tasks.forEach(function(task) { %>
-			        <input class="form-check-input"  id="checkedTask" type="checkbox"><a href='/task/<%= task.id %>'><%= task.id %>. <%= task.title %></a><br>
+			        <input class="form-check-input"  id="checkedTask" type="checkbox"><%= task.title %><span> | </span><button class="btn btn-sm btn-outline-info"><a href="/tasks/edit/?id=<%= task.id%>">edit</a></button>
+			        <button class="btn btn-sm btn-outline-danger"><a href="/tasks/delete/?id=<%= task.id%>">delete</a></button>
+			        <br><hr>
 			    <% }); %>
-			</form>	
 		</div>
 	  </div>
 	</body>

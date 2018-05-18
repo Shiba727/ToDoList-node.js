@@ -1,61 +1,103 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+:root {
+  box-sizing: border-box;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+*,
+::before,
+::after {
+  box-sizing: inherit;
 }
 
-button:hover {
-    opacity: 0.8;
+body {
+  background-color: #eee;
+  color: #004e66;
+  margin: 0;
+  padding: 0;
+  background: url(https://images.unsplash.com/photo-1451934403379-ffeff84932da?ixlib=rb-0.3.5&s=978e6793aad4edd140ad215761092540&auto=format&fit=crop&w=942&q=80);
+
 }
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
+/* form container */
 .container {
-    padding: 16px;
+  max-width: 400px;
+  margin: 3em auto;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: .5em;
+  background: hsla(240, 0%, 70%, 0.7);
 }
 
-span.psw {
-    float: right;
-    padding-top: 16px;
+@media (max-width: 600px) {
+  .container {
+    margin: 0 auto;
+  }
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
+.container h3 {
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee;
+}
+
+/* form */
+.form-field {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+label {
+  display: block;
+  margin-bottom: .8em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: left;
+  color: #212121;
+}
+
+input {
+  width: 100%;
+}
+
+/* submit button */
+#form-submit {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#form-submit input,
+#form-submit input:active {
+
+  outline: none;
+  padding: 0.5em;
+}
+
+#form-submit input:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+/* additional link */
+div #forgot-link {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+div #register-link {
+  font-size: 0.75rem;
+  text-align: center;
+  padding-top: 2em;
+  margin-top: 2.5em;
+  border-top: 1px solid #eee;
+}
+
+div a {
+  color: #000;
 }
