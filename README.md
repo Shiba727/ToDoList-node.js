@@ -1,5 +1,5 @@
 
-This is my first project by using node.js.
+This is my first project with node.js.
 
 ## Config.json
 which is for setting up for mysql and connecting to mysql
