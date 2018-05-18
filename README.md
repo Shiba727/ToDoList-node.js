@@ -5,7 +5,7 @@ This is my first project with node.js.
 which is for setting up for mysql and connecting to mysql
 
 ## Basic To do list
-* User could register/login.
+* User could register/login/logout.
 * User could add/delete/edit task to each list.
 * Use Session to control who could manipulate the list.
 * Use bcrpt to encrypt user password 
