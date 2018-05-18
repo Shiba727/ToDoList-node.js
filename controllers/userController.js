@@ -47,7 +47,11 @@ let userController = {
 				}
 			}
 		})
-	}	
+	},
+	logout: function(req,res){
+		req.session.destroy();
+		res.redirect(303,'/');
+	}		
 };
 module.exports = userController;
 
